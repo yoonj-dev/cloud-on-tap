@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="cloudBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1026"/>
+      <stop offset="100%" stop-color="#040714"/>
+    </linearGradient>
+    <linearGradient id="aws" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9900"/>
+      <stop offset="100%" stop-color="#E07A00"/>
+    </linearGradient>
+    <linearGradient id="azure" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0078D4"/>
+      <stop offset="100%" stop-color="#005A9E"/>
+    </linearGradient>
+    <linearGradient id="gcp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#34A853"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="24" fill="url(#cloudBg)"/>
+  <rect x="2" y="2" width="96" height="96" rx="22" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3"/>
+  <path d="M35 55 C30 55 25 50 25 44 C25 38 29 33 35 33 C37 26 44 22 52 22 C61 22 68 28 69 36 C75 37 80 42 80 48 C80 54 75 59 69 59 L35 59 Z" fill="#1e293b" opacity="0.6"/>
+  <circle cx="38" cy="48" r="8" fill="url(#aws)"/>
+  <circle cx="52" cy="42" r="9" fill="url(#azure)"/>
+  <circle cx="65" cy="49" r="8" fill="url(#gcp)"/>
+  <circle cx="52" cy="68" r="4" fill="#38BDF8"/>
+</svg>
