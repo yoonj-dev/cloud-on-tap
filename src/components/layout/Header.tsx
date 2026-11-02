@@ -4,6 +4,7 @@ import {
   Beer,
   ExternalLink,
   RefreshCw,
+  TrendingUp,
 } from 'lucide-react';
 import { Theme } from '../../lib/theme';
 import { CloudTicker, CloudPlatformMetrics } from '../../types/cloud';
@@ -94,6 +95,19 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Right: Controls & Context Menu */}
         <div className="flex items-center gap-1.5">
+          {/* Stock on Tap Direct Link */}
+          <a
+            href={activeTicker ? `https://stock.on-tap.xyz/?symbol=${activeTicker}` : "https://stock.on-tap.xyz"}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Stock on Tap 전체 주식 퀀트 플랫폼으로 이동"
+            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl border border-blue-200/80 dark:border-blue-900/40 bg-blue-50/70 hover:bg-blue-100/80 dark:bg-blue-950/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs font-bold transition-all shrink-0 shadow-2xs"
+          >
+            <TrendingUp className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
+            <span className="text-[11.5px] sm:text-xs font-bold whitespace-nowrap">Stock on Tap</span>
+            <ExternalLink className="w-3 h-3 opacity-60 hidden sm:inline shrink-0" />
+          </a>
+
           <button
             onClick={onRefresh}
             disabled={isRefreshing}
@@ -163,6 +177,19 @@ export const Header: React.FC<HeaderProps> = ({
                     </button>
 
                     <a
+                      href={activeTicker ? `https://stock.on-tap.xyz/?symbol=${activeTicker}` : "https://stock.on-tap.xyz"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-semibold"
+                    >
+                      <span className="flex items-center gap-1.5">
+                        <TrendingUp className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+                        <span>📈 Stock on Tap (전체 주식)</span>
+                      </span>
+                      <ExternalLink className="w-3 h-3 text-slate-400" />
+                    </a>
+
+                    <a
                       href="https://google.on-tap.xyz"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -199,6 +226,16 @@ export const Header: React.FC<HeaderProps> = ({
                       className="flex items-center justify-between px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-semibold"
                     >
                       <span>⚡ NVIDIA on Tap</span>
+                      <ExternalLink className="w-3 h-3 text-slate-400" />
+                    </a>
+
+                    <a
+                      href="https://dev.on-tap.xyz"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-semibold"
+                    >
+                      <span>🚀 개발자 페이지 (On Tap)</span>
                       <ExternalLink className="w-3 h-3 text-slate-400" />
                     </a>
                   </div>
